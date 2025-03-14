@@ -1,0 +1,40 @@
+ Instalar o Projeto
+Depois de transferir os arquivos, acesse a pasta do projeto na Raspberry Pi e execute o script de instalação:
+Este script vai:
+Atualizar os pacotes do sistema
+Instalar as dependências necessárias
+Criar um ambiente virtual Python
+Instalar as bibliotecas Python necessárias
+3. Conectar o Hardware
+Conecte os componentes de hardware conforme as instruções:
+Módulo L298N
+Motor Esquerdo:
+Enable: GPIO 25
+Input 1: GPIO 24
+Input 2: GPIO 23
+Motor Direito:
+Enable: GPIO 17
+Input 1: GPIO 27
+Input 2: GPIO 22
+Buzzer:
+Pino de sinal: GPIO 18
+4. Executar o Programa
+Após a instalação, execute o programa:
+5. Acessar a Interface de Controle
+Descubra o endereço IP da sua Raspberry Pi:
+No seu smartphone, conecte-se à mesma rede Wi-Fi da Raspberry Pi
+Abra o navegador no smartphone e acesse:
+Solução de Problemas
+Se encontrar o erro "externally-managed-environment":
+Você já tem três opções preparadas:
+Usar o ambiente virtual (já configurado no instalar.sh - opção recomendada)
+Usar a instalação forçada (com instalar_alternativo.sh - use apenas se necessário)
+Instalar manualmente seguindo as instruções no README
+Se o RPi.GPIO não funcionar:
+Verifique se está executando como superusuário:
+O programa foi adaptado para funcionar em modo de simulação se não conseguir acessar o GPIO, então você verá mensagens no console em vez de controlar os motores.
+Dicas Adicionais
+Mantenha a Raspberry Pi e o smartphone na mesma rede Wi-Fi
+Para iniciar o programa automaticamente na inicialização da Raspberry Pi, você pode configurar um serviço systemd
+Verifique se os pinos GPIO estão corretos para sua configuração específica
+Agora você está pronto para controlar seu carrinho robô com o smartphone! Divirta-se!
